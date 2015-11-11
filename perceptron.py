@@ -36,8 +36,7 @@ def update_weight():
         new_w_list.append( new_w )
     w.append( new_w_list )
 
-
-
+# 以下，計算を実行(main)
 for time in range(4):
     t = time
     print 't = ' + str( t )
