@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import numpy as np
+
 d = 1 # 教師信号
 theta = 0.5
 # k = 0.9
@@ -24,8 +26,12 @@ def step_func(val):
         return 0
     return 1
 
+def sigmoid(val):
+    return 1.0 / (1.0 + np.exp(-val))
+
 def calc_output():
     return step_func( calc_output_before() )
+    # return sigmoid( calc_output_before() )
 
 def update_weight():
     new_w_list = []
